@@ -1,0 +1,21 @@
+.cHeader{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    nav{
+        display: flex;
+        gap: 2rem;
+
+        a{
+            color: white;
+            text-decoration: none;
+        }
+    }
+}
+
+.cFooter{
+    position: absolute;
+    bottom: 1rem;
+}

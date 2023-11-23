@@ -2,10 +2,28 @@
 @import "variables.scss";
 
 // pages
-@import "../components/DefaultLayout/DefaultLayout.scss";
-@import "../components/DefaultStockLayout/DefaultStockLayout.scss";
-@import "../pages/AllItems/AllItems.scss";
-@import "../pages/Home/Home.scss";
-@import "../pages/Item/Item.scss";
-@import "../pages/ItemEditing/ItemEditing.scss";
-@import "../pages/NewItem/NewItem.scss";
+@import "style-components/DefaultLayout.scss";
+@import "style-components/DefaultStockLayout.scss";
+@import "style-pages/AllItems.scss";
+@import "style-pages/Home.scss";
+@import "style-pages/Item.scss";
+@import "style-pages/ItemEditing.scss";
+@import "style-pages/NewItem.scss";
+
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body{
+    background-color: $backgroundColor;
+    width: 100%;
+    min-height: 100vh;
+    padding: 1rem 1.5rem;
+    color: white;
+    display: flex;
+    flex-direction: column;
+
+}

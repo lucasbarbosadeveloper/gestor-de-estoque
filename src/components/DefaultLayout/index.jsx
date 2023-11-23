@@ -3,8 +3,8 @@ import { Link } from "react-router-dom"
 export default function DefaultLayout() {
     return (
         <>
-            <header>
-                <div>REACT STOCK</div>
+            <header className="cHeader">
+                <h2>REACT STOCK</h2>
                 <nav>
                     {/* mudar para <Link/> depois */}
                     <a href="">Home</a>
@@ -16,7 +16,7 @@ export default function DefaultLayout() {
 
             </main>
 
-            <footer>
+            <footer className="cFooter">
                 <p>Feito com React e React Router!</p>
             </footer>
         </>
