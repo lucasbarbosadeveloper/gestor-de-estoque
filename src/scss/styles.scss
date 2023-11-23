@@ -1,0 +1,11 @@
+// variables
+@import "variables.scss";
+
+// pages
+@import "../components/DefaultLayout/DefaultLayout.scss";
+@import "../components/DefaultStockLayout/DefaultStockLayout.scss";
+@import "../pages/AllItems/AllItems.scss";
+@import "../pages/Home/Home.scss";
+@import "../pages/Item/Item.scss";
+@import "../pages/ItemEditing/ItemEditing.scss";
+@import "../pages/NewItem/NewItem.scss";
