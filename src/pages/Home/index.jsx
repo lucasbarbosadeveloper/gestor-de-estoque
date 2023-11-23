@@ -24,6 +24,38 @@ export default function Home() {
                     <p className="qntCard">1</p>
                 </div>
             </div>
+
+            <div className="itemsView">
+                <table className="cTable">
+                    <tr>
+                        <th>Itens Recentes</th>
+                        <th>Ações</th>
+                    </tr>
+
+                    <tr>
+                        <td>7 wonders</td>
+                        <td>
+                            <button className="btn btn_view">Ver</button>
+                        </td>
+                    </tr>
+                </table>
+
+                <table className="cTable">
+                    <tr>
+                        <th>Itens acabando</th>
+                        <th>Qtd.</th>
+                        <th>Ações</th>
+                    </tr>
+
+                    <tr>
+                        <td>7 Wondres</td>
+                        <td>8</td>
+                        <td>
+                            <button className="btn btn_view">Ver</button>
+                        </td>
+                    </tr>
+                </table>
+            </div>
         </>
     )
 }

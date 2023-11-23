@@ -57,12 +57,14 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 1rem;
+  margin-bottom: 1rem;
 }
 .dashboardCards .cards {
   background-color: #1C1A1D;
   height: 120px;
   padding: 1rem;
   border-radius: 5px;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.6509803922);
 }
 .dashboardCards .cards .qntCard {
   display: flex;
@@ -70,6 +72,11 @@
   justify-content: center;
   height: 100%;
   font-size: 3rem;
+}
+
+.itemsView {
+  display: flex;
+  gap: 1rem;
 }
 
 * {
