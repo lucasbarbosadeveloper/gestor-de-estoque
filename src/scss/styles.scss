@@ -27,3 +27,23 @@ body{
     flex-direction: column;
 
 }
+
+.btn{
+    padding: 5px 8px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+.btn_view{
+    background-color: $btnColorBlue;
+}
+
+.btn_update{
+    background-color: $btnColorWhite;
+}
+
+.btn_del{
+    background-color: $btnColorRed;
+    color: white;
+}

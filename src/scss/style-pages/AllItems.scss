@@ -1,0 +1,18 @@
+.cTable{
+    width: 100%;
+    border-collapse: collapse;
+    
+    th{
+        background-color: $SecondaryColor;
+    }
+    
+    th, td {
+        text-align: start;
+        padding: 1rem;
+    }
+
+    .tdActions{
+        display: flex;
+        gap: .5rem;
+    }
+}

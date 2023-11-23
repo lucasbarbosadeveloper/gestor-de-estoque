@@ -37,6 +37,22 @@
   border-bottom: 2px solid white;
 }
 
+.cTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+.cTable th {
+  background-color: #1C1A1D;
+}
+.cTable th, .cTable td {
+  text-align: start;
+  padding: 1rem;
+}
+.cTable .tdActions {
+  display: flex;
+  gap: 0.5rem;
+}
+
 * {
   padding: 0%;
   margin: 0%;
@@ -52,6 +68,26 @@ body {
   color: white;
   display: flex;
   flex-direction: column;
+}
+
+.btn {
+  padding: 5px 8px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+.btn_view {
+  background-color: #5BA7FD;
+}
+
+.btn_update {
+  background-color: #FEFEFE;
+}
+
+.btn_del {
+  background-color: #FF5258;
+  color: white;
 }
 
 /*# sourceMappingURL=style.css.map */
