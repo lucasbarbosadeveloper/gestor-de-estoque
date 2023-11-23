@@ -1,8 +1,8 @@
-import DefaultLayout from "./components/DefaultLayout"
+import DeafaultStockLayout from "./components/DefaultStockLayout"
 
 function App() {
   return (
-    <DefaultLayout />
+    <DeafaultStockLayout />
   )
 
 }
