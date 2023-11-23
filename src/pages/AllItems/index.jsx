@@ -22,6 +22,7 @@ export default function AllItems() {
                     </td>
                 </tr>
 
+                
             </table>
         </>
     )
