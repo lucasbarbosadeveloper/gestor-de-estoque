@@ -13,7 +13,7 @@ export default function Item() {
                 <div>Preço: R$ 399.99</div>
             </div>
 
-            <p>Jogo de tabuleiro para vários jogadores</p>
+            <p className="descriptionProduct">Jogo de tabuleiro para vários jogadores</p>
 
             <div className="updateDate">
                 <span>Cadastrado em: Fri Jun 16 2023</span>

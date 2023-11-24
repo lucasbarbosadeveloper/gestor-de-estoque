@@ -1,0 +1,33 @@
+.product{
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    align-items: center;
+
+    h2{
+        font-weight: 100;
+        margin-right: 1rem;
+    }
+}
+
+.infosCard{
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 2rem;
+
+    div{
+        background-color: $SecondaryColor;
+        padding: 1rem 1.5rem;
+        border-radius: 5px;
+        box-shadow: 0px 0px 8px #000000a6;
+    }
+}
+
+.descriptionProduct{
+    margin-bottom: 2rem;
+}
+
+.updateDate{
+    display: flex;
+    gap: 2rem;
+}

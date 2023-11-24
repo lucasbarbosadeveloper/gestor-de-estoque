@@ -79,6 +79,38 @@
   gap: 1rem;
 }
 
+.product {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  align-items: center;
+}
+.product h2 {
+  font-weight: 100;
+  margin-right: 1rem;
+}
+
+.infosCard {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+.infosCard div {
+  background-color: #1C1A1D;
+  padding: 1rem 1.5rem;
+  border-radius: 5px;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.6509803922);
+}
+
+.descriptionProduct {
+  margin-bottom: 2rem;
+}
+
+.updateDate {
+  display: flex;
+  gap: 2rem;
+}
+
 * {
   padding: 0%;
   margin: 0%;
