@@ -1,7 +1,7 @@
-export default function ItemEditing() {
+export default function ItemEditing({title}) {
     return (
         <>
-            <h2>Atualizar Item - 7 Wonders</h2>
+            <h2>{title}</h2>
 
             <form className="cForm">
                 <div className="cform__inputs">
@@ -23,6 +23,7 @@ export default function ItemEditing() {
                     <div className="inputCards  input4">
                         <label htmlFor="category">Categoria</label>
                         <select name="category" id="category">
+                            <option value="" disabled selected hidden>Selecione uma categoria</option>
                             <option value="Jogos">Jogos</option>
                             <option value="Hardware">Hardware</option>
                         </select>
