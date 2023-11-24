@@ -111,6 +111,54 @@
   gap: 2rem;
 }
 
+h2 {
+  font-weight: 100;
+  margin-bottom: 2rem;
+}
+
+.cForm {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0 10%;
+}
+.cForm .cform__inputs {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-areas: "item1 item2 item3 item4" "textAreaInput textAreaInput textAreaInput textAreaInput";
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  width: 100%;
+}
+.cForm .cform__inputs .inputCards {
+  display: flex;
+  flex-direction: column;
+}
+.cForm .cform__inputs .inputCards input, .cForm .cform__inputs .inputCards select, .cForm .cform__inputs .inputCards textarea {
+  background-color: #1C1A1D;
+  color: white;
+  border: none;
+  padding: 10px;
+  width: 100%;
+  border-radius: 5px;
+  margin-top: 5px;
+}
+.cForm .cform__inputs .input1 {
+  grid-area: item1;
+}
+.cForm .cform__inputs .input2 {
+  grid-area: item2;
+}
+.cForm .cform__inputs .input3 {
+  grid-area: item3;
+}
+.cForm .cform__inputs .input4 {
+  grid-area: item4;
+}
+.cForm .cform__inputs .textAreaInput {
+  grid-area: textAreaInput;
+}
+
 * {
   padding: 0%;
   margin: 0%;

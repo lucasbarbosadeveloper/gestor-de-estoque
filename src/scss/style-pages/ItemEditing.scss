@@ -1,0 +1,62 @@
+h2{
+    font-weight: 100;
+    margin-bottom: 2rem;
+}
+
+.cForm{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0 10%;
+    
+    .cform__inputs{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-areas: 
+            "item1 item2 item3 item4"
+            "textAreaInput textAreaInput textAreaInput textAreaInput"
+        ;
+        gap: 1.5rem;
+        margin-bottom: 2rem;
+        width: 100%;
+
+
+        .inputCards{
+            display: flex;
+            flex-direction: column;
+        
+            input, select, textarea{
+                background-color: $SecondaryColor;
+                color: white;
+                border: none;
+                padding: 10px;
+                width: 100%;
+                border-radius: 5px;
+                margin-top: 5px;
+
+            }
+        }
+
+        .input1{
+            grid-area: item1;
+        }
+
+        .input2{
+            grid-area: item2;
+        }
+
+        .input3{
+            grid-area: item3;
+        }
+
+        .input4{
+            grid-area: item4;
+        }
+
+        .textAreaInput{
+            grid-area: textAreaInput;
+        }
+        
+    }
+
+}
