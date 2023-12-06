@@ -5,6 +5,8 @@ import DefaultLayout from "./components/DefaultLayout";
 import RecentList from "./pages/Home/RecentList";
 import loadProduct from "./loaders/product";
 import Item from "./pages/Item";
+import AllItems from "./pages/AllItems";
+import NewItem from "./pages/NewItem";
 
 export const router = createBrowserRouter([
     {
@@ -21,7 +23,17 @@ export const router = createBrowserRouter([
             },
             {
                 path: "/stockItems",
-                element: <DeafaultStockLayout />
+                element: <DeafaultStockLayout />,
+                children: [
+                    {
+                        index: true,
+                        element: <AllItems />
+                    },
+                    {
+                        path: "/stockItems/newItem",
+                        element: <NewItem />
+                    }
+                ]
             }
         ]
     }
