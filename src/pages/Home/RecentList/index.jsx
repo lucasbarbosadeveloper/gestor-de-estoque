@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 import products from "../../../dataBase.json"
 
 export default function RecentList() {
@@ -7,7 +8,7 @@ export default function RecentList() {
                 <tr key={product.id}>
                     <td>{product.name}</td>
                     <td>
-                        <button className="btn btn_view">Ver</button>
+                        <Link to={`/product/${product.id}`} className="btn btn_view">Ver</Link>
                     </td>
                 </tr>
             ))}
