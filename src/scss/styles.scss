@@ -33,17 +33,36 @@ body{
     border-radius: 5px;
     border: none;
     cursor: pointer;
+    text-decoration: none;
 }
 
 .btn_view{
     background-color: $btnColorBlue;
+
+    &:hover{
+        background-color: #353535;
+        color: $btnColorBlue;
+        border: 1px solid $btnColorBlue;
+    }
 }
 
 .btn_update{
     background-color: $btnColorWhite;
+
+    &:hover{
+        background-color: #353535;
+        color: $btnColorWhite;
+        border: 1px solid $btnColorWhite;
+    }
 }
 
 .btn_del{
     background-color: $btnColorRed;
     color: white;
+
+    &:hover{
+        background-color: #353535;
+        color: $btnColorRed;
+        border: 1px solid $btnColorRed;
+    }
 }

@@ -24,4 +24,11 @@
 .itemsView{
     display: flex;
     gap: 1rem;
+    align-items: start;
+
+    .cTable{
+        thead{
+            box-shadow: 0px 0px 8px #000000a6;
+        }
+    }
 }
