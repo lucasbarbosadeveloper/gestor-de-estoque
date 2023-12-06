@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom"
+import { Link, Outlet } from "react-router-dom"
 
 export default function DefaultLayout() {
     return (
@@ -6,14 +6,13 @@ export default function DefaultLayout() {
             <header className="cHeader">
                 <h2>REACT STOCK</h2>
                 <nav>
-                    {/* mudar para <Link/> depois */}
-                    <a href="">Home</a>
-                    <a href="">Items</a>
+                    <Link to={"/"}>Home</Link>
+                    <Link to={"/stockItems"}>Items</Link>
                 </nav>
             </header>
 
             <main>
-
+                <Outlet />
             </main>
 
             <footer className="cFooter">
