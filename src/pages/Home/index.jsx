@@ -1,3 +1,5 @@
+import RecentList from "./RecentList";
+
 export default function Home() {
     return (
         <>
@@ -27,33 +29,37 @@ export default function Home() {
 
             <div className="itemsView">
                 <table className="cTable">
-                    <tr>
-                        <th>Itens Recentes</th>
-                        <th>Ações</th>
-                    </tr>
+                    <thead>
+                        <tr>
+                            <th>Itens Recentes</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
 
-                    <tr>
-                        <td>7 wonders</td>
-                        <td>
-                            <button className="btn btn_view">Ver</button>
-                        </td>
-                    </tr>
+                    <tbody>
+                        <RecentList />
+                    </tbody>
+
                 </table>
 
                 <table className="cTable">
-                    <tr>
-                        <th>Itens acabando</th>
-                        <th>Qtd.</th>
-                        <th>Ações</th>
-                    </tr>
+                    <thead>
+                        <tr>
+                            <th>Itens acabando</th>
+                            <th>Qtd.</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
 
-                    <tr>
-                        <td>7 Wondres</td>
-                        <td>8</td>
-                        <td>
-                            <button className="btn btn_view">Ver</button>
-                        </td>
-                    </tr>
+                    <tbody>
+                        <tr>
+                            <td>7 Wondres</td>
+                            <td>8</td>
+                            <td>
+                                <button className="btn btn_view">Ver</button>
+                            </td>
+                        </tr>
+                    </tbody>
                 </table>
             </div>
         </>
