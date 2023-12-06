@@ -1,19 +1,23 @@
+import { useLoaderData } from "react-router-dom"
+
 export default function Item() {
+    const product = useLoaderData()
+
     return (
         <>
             <div className="product">
-                <h2>7 Wonders</h2>
+                <h2>{product.name}</h2>
                 <button className="btn btn_update">Atualizar</button>
                 <button className="btn btn_del">Excluir</button>
             </div>
 
             <div className="infosCard">
-                <div>Categoria: Jogos</div>
-                <div>Quantidade em estoque: 8</div>
-                <div>Preço: R$ 399.99</div>
+                <div>Categoria: {product.category}</div>
+                <div>Quantidade em estoque: {product.quantity}</div>
+                <div>Preço: R$ {product.price}</div>
             </div>
 
-            <p className="descriptionProduct">Jogo de tabuleiro para vários jogadores</p>
+            <p className="descriptionProduct">{product.description}</p>
 
             <div className="updateDate">
                 <span>Cadastrado em: Fri Jun 16 2023</span>
