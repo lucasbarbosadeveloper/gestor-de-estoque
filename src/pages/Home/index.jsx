@@ -1,3 +1,4 @@
+import ItemsOut from "./ItemsOut";
 import RecentList from "./RecentList";
 
 export default function Home() {
@@ -52,13 +53,7 @@ export default function Home() {
                     </thead>
 
                     <tbody>
-                        <tr>
-                            <td>7 Wondres</td>
-                            <td>8</td>
-                            <td>
-                                <button className="btn btn_view">Ver</button>
-                            </td>
-                        </tr>
+                        <ItemsOut />
                     </tbody>
                 </table>
             </div>
