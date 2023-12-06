@@ -1,3 +1,4 @@
+import DashboardCards from "./DashboardCards";
 import ItemsOut from "./ItemsOut";
 import RecentList from "./RecentList";
 
@@ -6,27 +7,7 @@ export default function Home() {
         <>
             <h1 className="title">Dashboard</h1>
 
-            <div className="dashboardCards">
-                <div className="cards">
-                    <p className="titleCrad">Diversidade de Itens</p>
-                    <div className="qntCard">2</div>
-                </div>
-
-                <div className="cards">
-                    <p className="titleCrad">Inventário total</p>
-                    <p className="qntCard">40</p>
-                </div>
-
-                <div className="cards">
-                    <p className="titleCrad">Itens recentes</p>
-                    <p className="qntCard">2</p>
-                </div>
-
-                <div className="cards">
-                    <p className="titleCrad">itens acabando</p>
-                    <p className="qntCard">1</p>
-                </div>
-            </div>
+            <DashboardCards />
 
             <div className="itemsView">
                 <table className="cTable">
