@@ -23,7 +23,7 @@ export default function ItemEditing({title}) {
                     <div className="inputCards  input4">
                         <label htmlFor="category">Categoria</label>
                         <select name="category" id="category">
-                            <option value="" disabled selected hidden>Selecione uma categoria</option>
+                            <option value="">--Selecione uma categoria--</option>
                             <option value="Jogos">Jogos</option>
                             <option value="Hardware">Hardware</option>
                         </select>
