@@ -7,6 +7,7 @@ import loadProduct from "./loaders/product";
 import Item from "./pages/Item";
 import AllItems from "./pages/AllItems";
 import NewItem from "./pages/NewItem";
+import ItemEditing from "./pages/ItemEditing";
 
 export const router = createBrowserRouter([
     {
@@ -19,6 +20,12 @@ export const router = createBrowserRouter([
             },{
                 path: "/product/:productID",
                 element: <Item />,
+                loader: loadProduct
+                
+            },
+            {
+                path: "/product/:productID/edit",
+                element: <ItemEditing />,
                 loader: loadProduct
             },
             {
