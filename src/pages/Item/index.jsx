@@ -1,4 +1,4 @@
-import { useLoaderData } from "react-router-dom"
+import { Link, useLoaderData } from "react-router-dom"
 
 export default function Item() {
     const product = useLoaderData()
@@ -7,7 +7,7 @@ export default function Item() {
         <>
             <div className="product">
                 <h2>{product.name}</h2>
-                <button className="btn btn_update">Atualizar</button>
+                <Link to={`/product/${product.id}/edit`} className="btn btn_update">Atualizar</Link>
                 <button className="btn btn_del">Excluir</button>
             </div>
 
