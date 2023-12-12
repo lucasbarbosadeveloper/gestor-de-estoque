@@ -1,57 +1,15 @@
 import { useState } from "react"
+import { hookLocalStorage } from "../../hooks/hookLocalStorage"
 
 
 export default function NewItem() {
-    // estado para pegar os dados do form
-    const [dataForm, setDataForm] = useState({
-        id: 0,
-        name: "",
-        quantity: 0,
-        price: 0,
-        category: "",
-        description: ""
-    })
-    const [arr, setArr] = useState([])
+    const logic = hookLocalStorage()
 
-    // funcao para lidar com a mudança de um campo
-    const inputChange = (ev) => {
-
-        const {name, value} = ev.target
-        setDataForm((prevData) => ({
-            ...prevData, 
-            [name]: value,
-        }))
-    }
-
-
-    // funcao de submit para obter os dados do form
-    const handleSubmit = (ev) => {
-        ev.preventDefault()
-        dataForm.id = Math.floor(Math.random() * 90000) + 10000
-
-        setArr((state) => {
-            const newState = [...state, dataForm]
-            localStorage.setItem('db', JSON.stringify(newState))
-            
-            return newState
-        })
-        
-        setDataForm({
-            id: 0,
-            name: "",
-            quantity: 0,
-            price: 0,
-            category: "",
-            description: ""
-        })
-    }
-
-    
     return (
         <>
             <h2>Novo Item</h2>
 
-            <form className="cForm" onSubmit={handleSubmit}>
+            <form className="cForm" onSubmit={logic.handleSubmit}>
                 <div className="cform__inputs">
                     <div className="inputCards input1">
                         <label htmlFor="name">Nome</label>
@@ -59,8 +17,8 @@ export default function NewItem() {
                             type="text"
                             name="name"
                             id="name"
-                            value={dataForm.name}
-                            onChange={inputChange}
+                            value={logic.dataForm.name}
+                            onChange={logic.inputChange}
                          />
                     </div>
 
@@ -70,8 +28,8 @@ export default function NewItem() {
                             type="number"
                             name="quantity"
                             id="quantity"
-                            value={dataForm.quantity}
-                            onChange={inputChange}
+                            value={logic.dataForm.quantity}
+                            onChange={logic.inputChange}
                         />
                     </div>
 
@@ -81,8 +39,8 @@ export default function NewItem() {
                             type="number"
                             name="price"
                             id="price"
-                            value={dataForm.price}
-                            onChange={inputChange}
+                            value={logic.dataForm.price}
+                            onChange={logic.inputChange}
                         />
                     </div>
 
@@ -91,8 +49,8 @@ export default function NewItem() {
                         <select
                             name="category"
                             id="category"
-                            value={dataForm.category}
-                            onChange={inputChange}
+                            value={logic.dataForm.category}
+                            onChange={logic.inputChange}
                         >
                             <option value="">--Selecione uma categoria--</option>
                             <option value="Aminoácidos">Aminoácidos</option>
@@ -108,8 +66,8 @@ export default function NewItem() {
                             name="description"
                             id="description"
                             rows="5"
-                            value={dataForm.description}
-                            onChange={inputChange}
+                            value={logic.dataForm.description}
+                            onChange={logic.inputChange}
                         ></textarea>
                     </div>
                 </div>
