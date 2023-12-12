@@ -1,6 +1,9 @@
+import { hookLocalStorage } from "../../hooks/hookLocalStorage";
 import IndItem from "./IndItem";
 
 export default function AllItems() {
+    const {dataBase} = hookLocalStorage()
+    
     return(
         <>
             <table className="cTable">
@@ -15,7 +18,9 @@ export default function AllItems() {
                 </thead>
 
                 <tbody>
+                    
                     <IndItem />
+                    
                 </tbody>
 
                 

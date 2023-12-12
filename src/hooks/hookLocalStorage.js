@@ -1,4 +1,3 @@
-import URL from '../dataBase.json'
 import { useState } from "react"
 
 
@@ -12,9 +11,8 @@ export function hookLocalStorage() {
         category: "",
         description: ""
     })
-    const [arr, setArr] = useState([])
 
-    // funcao para lidar com a mudança de um campo
+    // funcao para lidar com a mudança de um input
     const inputChange = (ev) => {
 
         const {name, value} = ev.target
@@ -24,19 +22,25 @@ export function hookLocalStorage() {
         }))
     }
 
+    // var que onter o array do localStorage
+    const dataBase = JSON.parse(localStorage.getItem('db'))
+
+    // verificação para a existencia na chave 'db'
+    if (dataBase) {
+        undefined
+    } else {
+        console.log('nn')
+        localStorage.setItem('db', JSON.stringify([]))
+    }
 
     // funcao de submit para obter os dados do form
     const handleSubmit = (ev) => {
         ev.preventDefault()
-        dataForm.id = Math.floor(Math.random() * 90000) + 10000
+        dataForm.id = Math.floor(Math.random() * 90000) + 10000        
 
-        setArr((state) => {
-            const newState = [...state, dataForm]
-            localStorage.setItem('db', JSON.stringify(newState))
-            
-            return newState
-        })
-        
+        dataBase.push(dataForm)
+        localStorage.setItem('db', JSON.stringify(dataBase))
+
         setDataForm({
             id: 0,
             name: "",
@@ -47,5 +51,5 @@ export function hookLocalStorage() {
         })
     }
     
-    return {handleSubmit, dataForm, inputChange}
+    return {handleSubmit, dataForm, inputChange, dataBase}
 }

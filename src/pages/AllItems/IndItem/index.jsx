@@ -1,10 +1,12 @@
 import { Link } from "react-router-dom";
-import products from "../../../dataBase.json";
+import { hookLocalStorage } from "../../../hooks/hookLocalStorage";
 
 export default function IndItem() {
+    const {dataBase} = hookLocalStorage()
+
     return (
         <>
-            {products.map((product) => (
+            {dataBase.map((product) => (
                 <tr key={product.id}>
                     <td>{product.id}</td>
                     <td>{product.name}</td>
