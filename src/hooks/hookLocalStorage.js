@@ -1,5 +1,4 @@
-import { useState } from "react"
-
+import { useState } from "react";
 
 export function hookLocalStorage() {
     // estado para pegar os dados do form
@@ -9,7 +8,8 @@ export function hookLocalStorage() {
         quantity: 0,
         price: 0,
         category: "",
-        description: ""
+        description: "",
+        registrationTime: ""
     })
 
     // funcao para lidar com a mudança de um input
@@ -22,7 +22,7 @@ export function hookLocalStorage() {
         }))
     }
 
-    // var que onter o array do localStorage
+    // var que obtem o array do localStorage
     const dataBase = JSON.parse(localStorage.getItem('db'))
 
     // verificação para a existencia na chave 'db'
@@ -33,13 +33,21 @@ export function hookLocalStorage() {
         localStorage.setItem('db', JSON.stringify([]))
     }
 
+    const date = () => {
+        const data = new Date()
+
+        return `${data.toLocaleDateString()} ${data.toLocaleTimeString()}`
+    }
+
     // funcao de submit para obter os dados do form
     const handleSubmit = (ev) => {
         ev.preventDefault()
-        dataForm.id = Math.floor(Math.random() * 90000) + 10000        
+        dataForm.id = Math.floor(Math.random() * 90000) + 10000
+        dataForm.registrationTime = date()
 
         dataBase.push(dataForm)
         localStorage.setItem('db', JSON.stringify(dataBase))
+        console.log(dataBase)
 
         setDataForm({
             id: 0,
@@ -51,5 +59,5 @@ export function hookLocalStorage() {
         })
     }
     
-    return {handleSubmit, dataForm, inputChange, dataBase}
+    return {handleSubmit, dataForm, inputChange, dataBase, date}
 }

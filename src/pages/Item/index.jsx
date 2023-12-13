@@ -20,7 +20,7 @@ export default function Item() {
             <p className="descriptionProduct">{product.description}</p>
 
             <div className="updateDate">
-                <span>Cadastrado em: Fri Jun 16 2023</span>
+                <span>Cadastrado em: {product.registrationTime}</span>
                 <span>Atualizado em Fri Jun 16 2023</span>
             </div>
         </>
