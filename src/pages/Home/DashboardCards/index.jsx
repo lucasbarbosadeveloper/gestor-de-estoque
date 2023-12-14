@@ -1,31 +1,34 @@
-import products from "../../../dataBase.json";
+import { hookLocalStorage } from "../../../hooks/hookLocalStorage";
 
 export default function DashboardCards() {
+    const {dataBase} = hookLocalStorage()
     return (
         <div className="dashboardCards">
         <div className="cards">
-            <p className="titleCrad">Diversidade de Itens</p>
+            <p className="titleCrad">Diversidade de Produtos</p>
             <div className="qntCard">{
-                new Set(products.map(product => product.name)).size
+                new Set(dataBase.map(product => product.name)).size
             }</div>
         </div>
 
         <div className="cards">
-            <p className="titleCrad">Inventário total</p>
+            <p className="titleCrad">Inventário Total</p>
             <p className="qntCard">{
-                products.reduce((acum, product) => acum + product.quantity, 0)
+                dataBase.reduce((acum, product) => acum + (+product.quantity), 0)
             }</p>
         </div>
 
         <div className="cards">
-            <p className="titleCrad">Itens recentes</p>
-            <p className="qntCard">FALTA</p>
+            <p className="titleCrad">Valor do Estoque</p>
+            <p className="qntCard">{`
+                R$ ${dataBase.reduce((acum, product) => acum + (+product.price), 0).toFixed(2)}
+            `}</p>
         </div>
 
         <div className="cards">
-            <p className="titleCrad">itens acabando</p>
+            <p className="titleCrad">Itens Acabando</p>
             <p className="qntCard">{
-                products.filter(product => product.quantity < 10).length
+                dataBase.filter(product => product.quantity < 10).length
             }</p>
         </div>
     </div>

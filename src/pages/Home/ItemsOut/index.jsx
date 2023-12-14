@@ -1,9 +1,12 @@
 import { Link } from "react-router-dom"
 import products from "../../../dataBase.json"
+import { hookLocalStorage } from "../../../hooks/hookLocalStorage"
 
-const itemsRunningOut = products.filter(product => product.quantity < 10)
 
 export default function ItemsOut() {
+    const {dataBase} = hookLocalStorage()
+
+    const itemsRunningOut = dataBase.filter(product => product.quantity < 10)
     return (
         <>
             {itemsRunningOut.map((product) => (

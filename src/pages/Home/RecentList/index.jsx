@@ -1,10 +1,13 @@
 import { Link } from "react-router-dom"
-import products from "../../../dataBase.json"
+import { hookLocalStorage } from "../../../hooks/hookLocalStorage"
 
 export default function RecentList() {
+    const {dataBase} = hookLocalStorage()
+
+    const lastedItems = dataBase.slice(dataBase.length - 3, dataBase.length).reverse()
     return (
         <>
-            {products.map((product) => (
+            {lastedItems.map((product) => (
                 <tr key={product.id}>
                     <td>{product.name}</td>
                     <td>
