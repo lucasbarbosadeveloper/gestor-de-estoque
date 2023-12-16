@@ -21,7 +21,7 @@ export default function Item() {
 
             <div className="updateDate">
                 <span>Cadastrado em: {product.registrationTime}</span>
-                <span>Atualizado em Fri Jun 16 2023</span>
+                <span>{product.editTime ? `Atualizado em: ${product.editTime}` : undefined}</span>
             </div>
         </>
     )
