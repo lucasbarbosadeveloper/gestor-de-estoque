@@ -165,6 +165,11 @@ h2 {
   grid-area: textAreaInput;
 }
 
+.deleteItem .links {
+  display: flex;
+  gap: 1rem;
+}
+
 * {
   padding: 0%;
   margin: 0%;
@@ -188,6 +193,8 @@ body {
   cursor: pointer;
   text-decoration: none;
   border: 1px solid transparent;
+  font-size: 1rem;
+  color: black;
 }
 
 .btn_view {
