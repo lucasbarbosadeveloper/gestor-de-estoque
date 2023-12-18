@@ -8,7 +8,7 @@ export default function Item() {
             <div className="product">
                 <h2>{product.name}</h2>
                 <Link to={`/product/${product.id}/edit`} className="btn btn_update">Atualizar</Link>
-                <button className="btn btn_del">Excluir</button>
+                <Link to={`/product/${product.id}/del`} className="btn btn_del">Excluir</Link>
             </div>
 
             <div className="infosCard">
