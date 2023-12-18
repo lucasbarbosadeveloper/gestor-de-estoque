@@ -1,6 +1,9 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export function hookLocalStorage() {
+    const navigate = useNavigate()
+
     // estado para pegar os dados do form
     const [dataForm, setDataForm] = useState({
         id: 0,
@@ -9,7 +12,8 @@ export function hookLocalStorage() {
         price: 0,
         category: "",
         description: "",
-        registrationTime: ""
+        registrationTime: "",
+        editTime: ""
     })
 
     // funcao para lidar com a mudança de um input
@@ -29,7 +33,6 @@ export function hookLocalStorage() {
     if (dataBase) {
         undefined
     } else {
-        console.log('nn')
         localStorage.setItem('db', JSON.stringify([]))
     }
 
@@ -47,7 +50,6 @@ export function hookLocalStorage() {
 
         dataBase.push(dataForm)
         localStorage.setItem('db', JSON.stringify(dataBase))
-        console.log(dataBase)
 
         setDataForm({
             id: 0,
@@ -57,6 +59,10 @@ export function hookLocalStorage() {
             category: "",
             description: ""
         })
+
+        alert('Novo item criado!')
+
+        navigate('/stockItems')
     }
     
     return {handleSubmit, dataForm, inputChange, dataBase, date}
