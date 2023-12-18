@@ -1,9 +1,10 @@
 import { useState } from "react"
-import { useLoaderData } from "react-router-dom"
+import { useLoaderData, useNavigate } from "react-router-dom"
 import { hookLocalStorage } from "./hookLocalStorage"
 
 export default function hookEditItem() {
     const product = useLoaderData()
+    const navigate = useNavigate()
     const {date} = hookLocalStorage()
     
     // estado para pegar os dados do form
@@ -53,6 +54,10 @@ export default function hookEditItem() {
     
             // atualiza o localStorage
             localStorage.setItem('db', JSON.stringify(db))
+
+            alert('Item atualizado!')
+
+            navigate(`/product/${product.id}`)
     
             console.log(dataFormEdit)
         }
