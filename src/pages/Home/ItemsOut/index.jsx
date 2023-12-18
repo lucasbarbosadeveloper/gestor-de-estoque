@@ -1,7 +1,5 @@
 import { Link } from "react-router-dom"
-import products from "../../../dataBase.json"
 import { hookLocalStorage } from "../../../hooks/hookLocalStorage"
-
 
 export default function ItemsOut() {
     const {dataBase} = hookLocalStorage()
