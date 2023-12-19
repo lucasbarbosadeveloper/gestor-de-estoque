@@ -60,3 +60,13 @@ h2{
     }
 
 }
+
+
+@media (max-width: 700px) {
+    .cForm {
+        .cform__inputs{
+            display: flex;
+            flex-direction: column;
+        }
+    }
+}

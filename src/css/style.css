@@ -214,6 +214,12 @@ h2 {
   grid-area: textAreaInput;
 }
 
+@media (max-width: 700px) {
+  .cForm .cform__inputs {
+    display: flex;
+    flex-direction: column;
+  }
+}
 .deleteItem .links {
   display: flex;
   gap: 1rem;
