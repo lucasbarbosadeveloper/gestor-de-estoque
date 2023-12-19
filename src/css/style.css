@@ -30,9 +30,8 @@
   font-size: 1.2rem;
 }
 
-.cFooter {
-  position: absolute;
-  bottom: 1rem;
+main {
+  margin-top: 2rem;
 }
 
 @media (min-width: 576px) {
@@ -86,6 +85,10 @@
 }
 .dashboardCards .cards {
   background-color: #1C1A1D;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   height: 120px;
   padding: 1rem;
   border-radius: 5px;
@@ -96,7 +99,7 @@
   align-items: center;
   justify-content: center;
   height: 100%;
-  font-size: 3rem;
+  font-size: 2rem;
 }
 
 .itemsView {
@@ -106,8 +109,29 @@
 }
 .itemsView .cTable thead {
   box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.6509803922);
+  border-radius: 5px;
 }
 
+@media (max-width: 600px) {
+  .dashboardCards {
+    display: flex;
+    flex-direction: column;
+  }
+  .itemsView {
+    flex-direction: column;
+  }
+  .itemsView .cTable {
+    margin-top: 2rem;
+  }
+}
+@media (max-width: 917px) {
+  .dashboardCards {
+    grid-template-columns: 1fr 1fr;
+  }
+  .itemsView .cTable thead {
+    font-size: 0.9rem;
+  }
+}
 .product {
   display: flex;
   gap: 1rem;
@@ -196,20 +220,22 @@ h2 {
 }
 
 * {
-  padding: 0%;
-  margin: 0%;
+  padding: 0;
+  margin: 0;
   box-sizing: border-box;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+* p {
+  padding: 0;
+  margin: 0;
 }
 
 body {
   background-color: #2C2C2D;
   width: 100%;
-  min-height: 100vh;
+  height: 100%;
   padding: 1rem 1.5rem;
   color: white;
-  display: flex;
-  flex-direction: column;
 }
 
 .btn {
