@@ -1,17 +1,8 @@
-import DeafaultStockLayout from "./components/DefaultStockLayout"
-import AllItems from "./pages/AllItems"
-import Home from "./pages/Home"
-import Item from "./pages/Item"
-import ItemEditing from "./pages/ItemEditing"
-import NewItem from "./pages/NewItem"
+import { RouterProvider } from "react-router-dom"
+import { router } from "./Router"
 
 function App() {
-  return (
-    <>
-      <NewItem />
-    </>
-  )
-
+  return <RouterProvider router={router}></RouterProvider>
 }
 
 export default App

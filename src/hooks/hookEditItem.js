@@ -58,9 +58,7 @@ export default function hookEditItem() {
             alert('Item atualizado!')
 
             navigate(`/product/${product.id}`)
-    
-            console.log(dataFormEdit)
-        }
+            }
     
 
     return {dataFormEdit, change, stad, editFunc}

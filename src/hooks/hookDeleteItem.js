@@ -16,8 +16,6 @@ export default function hookDeleteItem(oi) {
         alert('Item excluído!')
 
         navigate('/stockItems')
-
-        return console.log('Excluido')
     }
         
     return {del}
