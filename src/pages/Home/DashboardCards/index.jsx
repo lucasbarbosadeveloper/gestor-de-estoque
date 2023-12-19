@@ -2,6 +2,17 @@ import { hookLocalStorage } from "../../../hooks/hookLocalStorage";
 
 export default function DashboardCards() {
     const {dataBase} = hookLocalStorage()
+
+    function sum() {
+        let priceStock = 0
+
+        dataBase.map((product) => {
+            priceStock += product.price * product.quantity
+        })
+
+        return priceStock
+    }
+
     return (
         <div className="dashboardCards">
         <div className="cards">
@@ -21,7 +32,7 @@ export default function DashboardCards() {
         <div className="cards">
             <p className="titleCrad">Valor do Estoque</p>
             <p className="qntCard">{`
-                R$ ${dataBase.reduce((acum, product) => acum + (+product.price), 0).toFixed(2)}
+                R$ ${sum().toFixed(2)}
             `}</p>
         </div>
 

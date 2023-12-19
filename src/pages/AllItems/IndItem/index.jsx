@@ -15,7 +15,7 @@ export default function IndItem() {
                     <td className="tdActions">
                         <Link to={`/product/${product.id}`} className="btn btn_view">Ver</Link>
                         <Link to={`/product/${product.id}/edit`} className="btn btn_update">Atualizar</Link>
-                        <button className="btn btn_del">Excluir</button>
+                        <Link to={`/product/${product.id}/del`} className="btn btn_del">Excluir</Link>
                     </td>
                 </tr>
             ))}

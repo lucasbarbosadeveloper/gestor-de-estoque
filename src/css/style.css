@@ -4,13 +4,30 @@
   justify-content: space-between;
   align-items: center;
 }
+.cHeader h2 {
+  margin: 0;
+}
 .cHeader nav {
-  display: flex;
-  gap: 2rem;
+  display: none;
 }
 .cHeader nav a {
   color: white;
   text-decoration: none;
+  margin-left: 1rem;
+}
+.cHeader .navDrop button i {
+  font-size: 2rem;
+}
+.cHeader .navDrop ul {
+  border: none;
+  text-align: right;
+  padding: 1rem;
+  line-height: 2rem;
+}
+.cHeader .navDrop ul a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2rem;
 }
 
 .cFooter {
@@ -18,6 +35,14 @@
   bottom: 1rem;
 }
 
+@media (min-width: 576px) {
+  .cHeader nav {
+    display: flex;
+  }
+  .cHeader .navDrop {
+    display: none;
+  }
+}
 .title {
   font-weight: 100;
   font-size: 3rem;
