@@ -6,6 +6,7 @@
 
     h2{
         margin: 0;
+        
     }
 
     nav{
@@ -42,13 +43,18 @@
 
 }
 
+main{
+    margin-top: 2rem;
+    min-height: 85vh;
+}
+
 .cFooter{
-    position: absolute;
-    bottom: 1rem;
+    margin-top: 1rem;
 }
 
 @media (min-width: 576px) {
     .cHeader{
+        
         nav{
             display: flex;
         }
@@ -57,4 +63,5 @@
             display: none;
         }
     }
+
 }
