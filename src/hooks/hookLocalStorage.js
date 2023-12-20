@@ -64,6 +64,16 @@ export function hookLocalStorage() {
 
         navigate('/stockItems')
     }
+
+    function sum() {
+        let priceStock = 0
+
+        dataBase.map((product) => {
+            priceStock += product.price * product.quantity
+        })
+
+        return priceStock
+    }
     
-    return {handleSubmit, dataForm, inputChange, dataBase, date}
+    return {handleSubmit, dataForm, inputChange, dataBase, date, sum}
 }
