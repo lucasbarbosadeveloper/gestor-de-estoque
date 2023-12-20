@@ -10,6 +10,11 @@
         margin: 0;
         padding-right: 1rem;
     }
+
+    .productsBtn{
+        display: flex;
+        gap: 1rem;
+    }
 }
 
 .infosCard{
@@ -32,4 +37,19 @@
 .updateDate{
     display: flex;
     gap: 2rem;
+}
+
+@media (max-width: 700px) {
+    .product{
+        flex-direction: column;
+    }
+
+    .infosCard{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .updateDate{
+        flex-direction: column;
+    }
 }
