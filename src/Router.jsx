@@ -1,13 +1,13 @@
 import { createBrowserRouter } from "react-router-dom";
 import DeafaultStockLayout from "./components/DefaultStockLayout";
-import Home from "./pages/Home";
+import Home from "./components/pages/Home";
 import DefaultLayout from "./components/DefaultLayout";
 import loadProduct from "./loaders/product";
-import Item from "./pages/Item";
-import AllItems from "./pages/AllItems";
-import NewItem from "./pages/NewItem";
-import ItemEditing from "./pages/ItemEditing";
-import DeleteItem from "./pages/DeleteItem";
+import Item from "./components/pages/Item";
+import AllItems from "./components/pages/AllItems";
+import NewItem from "./components/pages/NewItem";
+import ItemEditing from "./components/pages/ItemEditing";
+import DeleteItem from "./components/pages/DeleteItem";
 
 export const router = createBrowserRouter([
     {
