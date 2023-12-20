@@ -30,9 +30,13 @@
   font-size: 1.2rem;
 }
 
+main {
+  margin-top: 2rem;
+  min-height: 85vh;
+}
+
 .cFooter {
-  position: absolute;
-  bottom: 1rem;
+  margin-top: 1rem;
 }
 
 @media (min-width: 576px) {
@@ -47,6 +51,10 @@
   font-weight: 100;
   font-size: 3rem;
   padding-bottom: 1.5rem;
+}
+
+.divForm {
+  overflow-x: auto;
 }
 
 .pages {
@@ -64,18 +72,29 @@
 
 .cTable {
   width: 100%;
+  height: 100%;
   border-collapse: collapse;
+  overflow: hidden;
+}
+.cTable thead tr th {
+  text-align: center;
 }
 .cTable th {
   background-color: #1C1A1D;
 }
 .cTable th, .cTable td {
-  text-align: start;
+  text-align: center;
   padding: 1rem;
 }
 .cTable .tdActions {
   display: flex;
+  align-items: center;
+  justify-content: center;
   gap: 0.5rem;
+}
+
+.cTableAll {
+  min-width: 800px;
 }
 
 .dashboardCards {
@@ -86,6 +105,10 @@
 }
 .dashboardCards .cards {
   background-color: #1C1A1D;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   height: 120px;
   padding: 1rem;
   border-radius: 5px;
@@ -96,7 +119,7 @@
   align-items: center;
   justify-content: center;
   height: 100%;
-  font-size: 3rem;
+  font-size: 2rem;
 }
 
 .itemsView {
@@ -106,8 +129,29 @@
 }
 .itemsView .cTable thead {
   box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.6509803922);
+  border-radius: 5px;
 }
 
+@media (max-width: 600px) {
+  .dashboardCards {
+    display: flex;
+    flex-direction: column;
+  }
+  .itemsView {
+    flex-direction: column;
+  }
+  .itemsView .cTable {
+    margin-top: 2rem;
+  }
+}
+@media (max-width: 917px) {
+  .dashboardCards {
+    grid-template-columns: 1fr 1fr;
+  }
+  .itemsView .cTable thead {
+    font-size: 0.9rem;
+  }
+}
 .product {
   display: flex;
   gap: 1rem;
@@ -119,6 +163,10 @@
   font-size: 2.5rem;
   margin: 0;
   padding-right: 1rem;
+}
+.product .productsBtn {
+  display: flex;
+  gap: 1rem;
 }
 
 .infosCard {
@@ -142,6 +190,18 @@
   gap: 2rem;
 }
 
+@media (max-width: 700px) {
+  .product {
+    flex-direction: column;
+  }
+  .infosCard {
+    flex-direction: column;
+    text-align: center;
+  }
+  .updateDate {
+    flex-direction: column;
+  }
+}
 h2 {
   font-weight: 100;
   margin-bottom: 2rem;
@@ -190,26 +250,37 @@ h2 {
   grid-area: textAreaInput;
 }
 
+@media (max-width: 700px) {
+  .cForm .cform__inputs {
+    display: flex;
+    flex-direction: column;
+  }
+}
 .deleteItem .links {
   display: flex;
   gap: 1rem;
 }
 
 * {
-  padding: 0%;
-  margin: 0%;
+  padding: 0;
+  margin: 0;
   box-sizing: border-box;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+* p {
+  padding: 0;
+  margin: 0;
 }
 
 body {
   background-color: #2C2C2D;
-  width: 100%;
-  min-height: 100vh;
-  padding: 1rem 1.5rem;
-  color: white;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  padding: 1rem 1.5rem;
+  color: white;
 }
 
 .btn {

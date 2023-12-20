@@ -6,6 +6,10 @@
     
     .cards{
         background-color: $SecondaryColor;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
         height: 120px;
         padding: 1rem;
         border-radius: 5px;
@@ -16,7 +20,7 @@
             align-items: center;
             justify-content: center;
             height: 100%;
-            font-size: 3rem;
+            font-size: 2rem;
         }
     }
 }
@@ -29,6 +33,38 @@
     .cTable{
         thead{
             box-shadow: 0px 0px 8px #000000a6;
+            border-radius: 5px;
         }
     }
 }
+
+@media (max-width: 600px) {
+    .dashboardCards{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .itemsView{
+        flex-direction: column;
+        
+        .cTable{
+            margin-top: 2rem;
+        }
+    }
+}
+
+@media (max-width: 917px) {
+    .dashboardCards{
+        grid-template-columns: 1fr 1fr;
+
+    }
+
+    .itemsView{
+        .cTable{
+            thead{
+                font-size: .9rem;
+            }
+        }
+    }
+}
+

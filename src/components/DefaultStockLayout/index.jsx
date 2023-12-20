@@ -9,7 +9,7 @@ export default function DeafaultStockLayout() {
                 <Link to={"/stockItems/newItem"}>Novo Item</Link>
             </div>
 
-            <div>
+            <div className="divForm">
                 <Outlet />
             </div>
         </>
